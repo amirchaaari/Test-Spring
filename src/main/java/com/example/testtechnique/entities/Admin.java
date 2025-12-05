@@ -36,7 +36,7 @@ public class Admin {
         createdAt = LocalDateTime.now();
         updatedAt = LocalDateTime.now();
     }
-asa
+
     @PreUpdate
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();

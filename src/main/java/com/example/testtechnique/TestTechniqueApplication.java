@@ -9,13 +9,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 @EnableScheduling
-//@EnableDiscoveryClient
-//@EnableFeignClients
-public class PiApplication {
-
+public class TestTechniqueApplication {
     public static void main(String[] args) {
-        SpringApplication.run(PiApplication.class, args);
+        SpringApplication.run(TestTechniqueApplication.class, args);
     }
+    
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
@@ -23,10 +21,10 @@ public class PiApplication {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins("http://localhost:4200") // Autorise Angular
-                        .allowedMethods("GET", "POST", "PUT", "DELETE")
-                        .allowedHeaders("*"); // Autorise tous les en-têtes
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
             }
         };
     }
-
 }
