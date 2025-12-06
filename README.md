@@ -26,7 +26,7 @@ This will start:
 ## API Documentation
 
 Once the backend is running, you can access the Swagger UI at:
-- http://localhost:8089/swagger-ui.html
+- http://localhost:8089/swagger-ui/index.html
 
 ## Technology Stack
 
